@@ -1,11 +1,14 @@
 package com.example.codemaniacol
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.codemaniacol.databinding.ActivityOnBoardingBinding
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoarding : AppCompatActivity() {
     lateinit var OnBoardingActivity : ActivityOnBoardingBinding
@@ -14,6 +17,8 @@ class OnBoarding : AppCompatActivity() {
         OnBoardingActivity = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(OnBoardingActivity.root)
         val button2 = findViewById<Button>(R.id.button2)
+        val Viewpager = findViewById<ViewPager>(R.id.Viewpager)
+        val tabs = findViewById<TabLayout>(R.id.tabs)
 
         setContentView(R.layout.activity_on_boarding)
         val list = listOf(OnBoard("Без теории, только практика\n" +
@@ -35,5 +40,12 @@ class OnBoarding : AppCompatActivity() {
 
 
         })
+        button2.setOnClickListener{
+            if (Viewpager.currentItem == 2){
+                startActivity(Intent(this,SignIn::class.java))
+            }
+            Viewpager.setCurrentItem(Viewpager.currentItem+1)
+        }
+        TabLayoutMediator(tabs,OnBoardingActivity.Viewpager,true){ tab: TabLayout.Tab, i: Int -> }.attach()
     }
 }
