@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".OnBoarding">
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="324dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="18dp"
+        android:backgroundTint="#FFC100"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Дальше"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Viewpager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/Viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
