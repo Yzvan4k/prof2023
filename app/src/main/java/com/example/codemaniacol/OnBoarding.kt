@@ -17,7 +17,7 @@ class OnBoarding : AppCompatActivity() {
         OnBoardingActivity = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(OnBoardingActivity.root)
         val button2 = findViewById<Button>(R.id.button2)
-        val Viewpager = findViewById<ViewPager>(R.id.Viewpager)
+        val VIEWpager = findViewById<ViewPager2>(R.id.Viewpager)
         val tabs = findViewById<TabLayout>(R.id.tabs)
 
         setContentView(R.layout.activity_on_boarding)
@@ -41,10 +41,10 @@ class OnBoarding : AppCompatActivity() {
 
         })
         button2.setOnClickListener{
-            if (Viewpager.currentItem == 2){
+            if (VIEWpager.currentItem == 2){
                 startActivity(Intent(this,SignIn::class.java))
             }
-            Viewpager.setCurrentItem(Viewpager.currentItem+1)
+            VIEWpager.setCurrentItem(VIEWpager.currentItem+1)
         }
         TabLayoutMediator(tabs,OnBoardingActivity.Viewpager,true){ tab: TabLayout.Tab, i: Int -> }.attach()
     }
