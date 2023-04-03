@@ -7,6 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+// Этот клас описывает элементы находящихся во ViewPager
+// 02.03.23
+// Egor (Yzvan)
 
 class ViewPagerAdapter(val list: List<OnBoard>): RecyclerView.Adapter<ViewPagerAdapter.VH>() {
     class VH(itenView:View):RecyclerView.ViewHolder(itenView) {

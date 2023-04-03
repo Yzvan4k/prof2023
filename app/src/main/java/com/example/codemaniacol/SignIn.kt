@@ -9,7 +9,10 @@ import android.widget.EditText
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+// Этот клас производит вход в систему
+// 02.03.23 - 03,03,23
+// Egor (Yzvan)
+// Проверка строк на пустоту .Проверка mail на Pattern.
 class SignIn : AppCompatActivity() {
     val button3 = findViewById<Button>(R.id.button3)
     val button4 = findViewById<Button>(R.id.button4)

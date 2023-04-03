@@ -9,6 +9,10 @@ import android.widget.EditText
 import retrofit2.Call
 import retrofit2.Response
 import javax.security.auth.callback.Callback
+// Этот клас производит регистрирование нового аккаунта в систему
+// 03.03.23
+// Egor (Yzvan)
+// Проверка строк на пустоту .Проверка mail на Pattern.Проверка пола.
 
 class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

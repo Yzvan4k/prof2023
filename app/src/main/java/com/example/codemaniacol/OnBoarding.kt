@@ -9,7 +9,10 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.codemaniacol.databinding.ActivityOnBoardingBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-
+// Этот клас показывает элеметы находящиеся на экране OnBoarding и изменения элементов в соответствиис ТЗ
+// 02.03.23
+// Egor (Yzvan)
+// переменная хранящая список элементов , Изменение текста кнопки а так же перелистование экранов
 class OnBoarding : AppCompatActivity() {
     lateinit var OnBoardingActivity : ActivityOnBoardingBinding
     override fun onCreate(savedInstanceState: Bundle?) {
