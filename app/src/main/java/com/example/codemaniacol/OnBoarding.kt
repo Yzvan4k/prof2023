@@ -15,12 +15,13 @@ import com.google.android.material.tabs.TabLayoutMediator
 // переменная хранящая список элементов , Изменение текста кнопки а так же перелистование экранов
 class OnBoarding : AppCompatActivity() {
     lateinit var OnBoardingActivity : ActivityOnBoardingBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         OnBoardingActivity = ActivityOnBoardingBinding.inflate(layoutInflater)
         setContentView(OnBoardingActivity.root)
         val button2 = findViewById<Button>(R.id.button2)
-        val VIEWpager = findViewById<ViewPager2>(R.id.Viewpager)
+        val VIEWpager = findViewById<ViewPager2>(R.id.viewpager)
         val tabs = findViewById<TabLayout>(R.id.tabs)
 
         setContentView(R.layout.activity_on_boarding)
@@ -31,16 +32,14 @@ class OnBoarding : AppCompatActivity() {
             OnBoard("Обучение онлайн из любой точки мира\n" +
                     "Наше обучение изначально создавалось как дистанционное",R.drawable.blogging_bro_1)
         )
-        OnBoardingActivity.Viewpager.adapter = ViewPagerAdapter(list)
-        OnBoardingActivity.Viewpager.registerOnPageChangeCallback(object :ViewPager2.OnPageChangeCallback(){
+        OnBoardingActivity.viewpager.adapter = ViewPagerAdapter(list)
+        OnBoardingActivity.viewpager.registerOnPageChangeCallback(object :ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 if (position == 2){
                     button2.text = "Начать"
                 }
                 super.onPageSelected(position)
             }
-
-
 
         })
         button2.setOnClickListener{
@@ -49,6 +48,6 @@ class OnBoarding : AppCompatActivity() {
             }
             VIEWpager.setCurrentItem(VIEWpager.currentItem+1)
         }
-        TabLayoutMediator(tabs,OnBoardingActivity.Viewpager,true){ tab: TabLayout.Tab, i: Int -> }.attach()
+        TabLayoutMediator(tabs,OnBoardingActivity.viewpager,true){ tab: TabLayout.Tab, i: Int -> }.attach()
     }
 }

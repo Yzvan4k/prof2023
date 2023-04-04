@@ -9,6 +9,7 @@ import android.os.Handler
 // Egor (Yzvan)
 // Указание экрана на который ведет Splash с указаним длительности показа
 class SplashScreen : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen2)

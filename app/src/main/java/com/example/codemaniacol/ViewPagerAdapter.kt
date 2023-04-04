@@ -29,6 +29,6 @@ class ViewPagerAdapter(val list: List<OnBoard>): RecyclerView.Adapter<ViewPagerA
     override fun onBindViewHolder(holder: VH, position: Int) {
 
         holder.OnBoardText.text = list[position].text
-        holder.OnBoardImg.setImageDrawable(ContextCompat.getDrawable(holder.itemView.context, list[position].img))
+        holder.OnBoardImg.setImageResource(list[position].img)
     }
 }
